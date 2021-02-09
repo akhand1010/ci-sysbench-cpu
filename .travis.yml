@@ -1,11 +1,12 @@
 language: c
 os:
   - linux
-  - osx
 arch:
   - amd64
   # - ppc64le  # Apply patch
-  - arm64
+  - arm64-graviton2
+virt: lxd
+group: edge
 
 install: ci-base/install.sh travis sysbench
 script: ./run.sh
